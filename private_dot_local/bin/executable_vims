@@ -1,0 +1,17 @@
+#!/bin/bash
+
+items="LazyVim NvChad AstroNvim SpaceVim LunarVim default"
+config=$(printf "%s\n" $items | fzf-tmux -p --prompt=" NeoVim Config: " --height=~50% --layout=reverse --border --exit-0)
+
+if [ -z "$config" ]; then
+	# echo "Nothing selected"
+	exit 0
+elif [ "$config" = "LunarVim" ]; then
+	lvim "$@"
+	exit 0
+elif [ "$config" = "default" ]; then
+	config=""
+fi
+
+export NVIM_APPNAME=nvim-$config
+tvim "$@"

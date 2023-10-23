@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if [ -z ${TMUX} ]; then
+	tmux new-session -e "NVIM_APPNAME=$NVIM_APPNAME" nvim "$@"
+else
+	nvim "$@"
+fi

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+export NVIM_APPNAME="${NVIM_APPNAME:-"nvim-AstroNvim"}"
+
+exec -a "$NVIM_APPNAME" nvim "$@"

@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+echo (basename (pwd)).surge.sh > public/CNAME
+
+surge ./public

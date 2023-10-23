@@ -1,0 +1,29 @@
+[user]
+  name = Pepe Becker
+  email = mail@pepebecker.com
+  signingkey = {{ onepasswordRead "op://Secrets/Signing Key/password" }}
+[init]
+  defaultBranch = main
+[core]
+  excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+  editor = lazy
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  side-by-side = true
+  navigate = true # use n and N to move between diff sections
+  light = false   # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+[merge]
+  conflictstyle = diff3
+[commit]
+  gpgsign = true
+[gpg]
+  program = /usr/local/MacGPG2/bin/gpg2
+[diff]
+  colorMoved = default
+[diff "lockb"]
+  textconv = bun
+  binary = true
+[filter "tide_prompt"]
+  clean = "sed '/^SETUVAR _tide_prompt_/d'"

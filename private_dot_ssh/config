@@ -1,0 +1,38 @@
+Host *
+  IdentityAgent ~/.1password/agent.sock
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host celsian
+  HostName celsian.pepe.asia
+  User root
+  IdentityFile ~/.ssh/scaleway
+  ForwardAgent yes
+  RemoteForward 52698 localhost:52698
+
+Host jannis
+  HostName zuhause.jannisr.de
+  Port 30020
+  User stranger
+  IdentityFile ~/.ssh/jannis-mac
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_rsa
+
+Host gitlab.com
+  HostName gitlab.com
+  User git
+  IdentityFile ~/.ssh/pepebecker-GitLab
+
+Host github.com-modimes
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/pepebecker-GitHub
+  #IdentityFile ~/.ssh/id_rsa_modimes
+
+# Fig ssh integration. Keep at the bottom of this file.
+Match all
+  Include ~/.fig/ssh

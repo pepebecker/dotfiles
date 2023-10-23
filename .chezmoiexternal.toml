@@ -1,0 +1,20 @@
+[".config/alacritty/catppuccin"]
+type = "git-repo"
+url = "https://github.com/catppuccin/alacritty.git"
+refreshPeriod = "72h"
+[".config/emacs"]
+type = "git-repo"
+url = "https://github.com/doomemacs/doomemacs.git"
+refreshPeriod = "72h"
+[".config/nvim-LazyVim"]
+type = "git-repo"
+url = "https://github.com/pepebecker/LazyVim.git"
+refreshPeriod = "72h"
+[".config/nvim-NvChad"]
+type = "git-repo"
+url = "https://github.com/pepebecker/NvChad.git"
+refreshPeriod = "72h"
+[".warp/themes/catppuccin_mocha.yml"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/warp/main/dist/catppuccin_mocha.yml"
+refreshPeriod = "72h"

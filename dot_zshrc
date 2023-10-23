@@ -1,0 +1,12 @@
+# Local Bin
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
+
+# EDITOR
+export EDITOR="lazy"
+
+for file in ~/.config/zsh/*; do
+  if [[ -f $file ]]; then
+    source $file
+  fi
+done
